@@ -1,0 +1,48 @@
+version: '2'
+services:
+
+  db:
+    image: aekapop/mysql
+    container_name: lemp_mysql
+    restart: always
+    volumes:
+      - ./mysql/data/:/var/lib/mysql
+      - ./mysql/initdb/:/docker-entrypoint-initdb.d
+
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpasswd
+      - MYSQL_DATABASE=mydb
+      - MYSQL_USER=myuser
+      - MYSQL_PASSWORD=mypasswd
+
+  php:
+    image: aekapop/php7.1-fpm-alpine
+    container_name: lemp_php-fpm
+    restart: always
+    volumes:
+      - ./www:/var/www/html
+      - ./php/config/php.ini-development:/usr/local/etc/php/php.ini
+    expose:
+      - "9000"
+
+  nginx:
+    image: nginx:alpine
+    container_name: lemp_nginx
+    restart: always
+    volumes:
+      - ./nginx/conf/nginx.conf:/etc/nginx/conf/nginx.conf:ro
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./nginx/log:/var/log/nginx
+    volumes_from:
+      - php
+    ports:
+      - 80:80
+      
+  pma:
+      image: phpmyadmin/phpmyadmin
+      container_name: lemp_phpmyadmin
+      restart: always
+      ports:
+        - "8888:80"

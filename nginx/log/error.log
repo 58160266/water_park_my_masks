@@ -1,0 +1,174 @@
+2018/02/14 16:05:11 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2018/02/14 16:06:36 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2018/02/14 16:40:38 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2018/02/14 17:05:16 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2018/02/14 17:17:13 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2018/02/14 17:23:23 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2018/02/14 17:28:05 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2018/02/15 03:43:44 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2018/02/15 04:10:22 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2018/02/15 05:51:48 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2018/02/15 05:51:57 [error] 5#5: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught RuntimeException: Unexpected data in output buffer. Maybe you have characters before an opening <?php tag? in /var/www/html/vendor/slim/slim/Slim/App.php:604
+Stack trace:
+#0 /var/www/html/vendor/slim/slim/Slim/App.php(316): Slim\App->finalize(Object(Slim\Http\Response))
+#1 /var/www/html/public/index.php(29): Slim\App->run()
+#2 {main}
+  thrown in /var/www/html/vendor/slim/slim/Slim/App.php on line 604" while reading response header from upstream, client: 172.19.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.19.0.4:9000", host: "localhost"
+2018/02/15 05:52:03 [error] 5#5: *3 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught RuntimeException: Unexpected data in output buffer. Maybe you have characters before an opening <?php tag? in /var/www/html/vendor/slim/slim/Slim/App.php:604
+Stack trace:
+#0 /var/www/html/vendor/slim/slim/Slim/App.php(316): Slim\App->finalize(Object(Slim\Http\Response))
+#1 /var/www/html/public/index.php(29): Slim\App->run()
+#2 {main}
+  thrown in /var/www/html/vendor/slim/slim/Slim/App.php on line 604" while reading response header from upstream, client: 172.19.0.1, server: localhost, request: "GET /v1/subjects HTTP/1.1", upstream: "fastcgi://172.19.0.4:9000", host: "localhost"
+2018/02/15 05:52:41 [error] 5#5: *5 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined variable: app in /var/www/html/src/routes.php on line 3
+PHP message: PHP Fatal error:  Uncaught Error: Call to a member function group() on null in /var/www/html/src/routes.php:3
+Stack trace:
+#0 /var/www/html/public/index.php(8): require()
+#1 {main}
+  thrown in /var/www/html/src/routes.php on line 3" while reading response header from upstream, client: 172.19.0.1, server: localhost, request: "GET /v1/subjects HTTP/1.1", upstream: "fastcgi://172.19.0.4:9000", host: "localhost"
+2018/02/15 05:53:44 [error] 5#5: *7 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught RuntimeException: Unexpected data in output buffer. Maybe you have characters before an opening <?php tag? in /var/www/html/vendor/slim/slim/Slim/App.php:604
+Stack trace:
+#0 /var/www/html/vendor/slim/slim/Slim/App.php(316): Slim\App->finalize(Object(Slim\Http\Response))
+#1 /var/www/html/public/index.php(30): Slim\App->run()
+#2 {main}
+  thrown in /var/www/html/vendor/slim/slim/Slim/App.php on line 604" while reading response header from upstream, client: 172.19.0.1, server: localhost, request: "GET /v1/subjects HTTP/1.1", upstream: "fastcgi://172.19.0.4:9000", host: "localhost"
+2018/02/15 05:54:12 [error] 5#5: *7 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught RuntimeException: Unexpected data in output buffer. Maybe you have characters before an opening <?php tag? in /var/www/html/vendor/slim/slim/Slim/App.php:604
+Stack trace:
+#0 /var/www/html/vendor/slim/slim/Slim/App.php(316): Slim\App->finalize(Object(Slim\Http\Response))
+#1 /var/www/html/public/index.php(30): Slim\App->run()
+#2 {main}
+  thrown in /var/www/html/vendor/slim/slim/Slim/App.php on line 604" while reading response header from upstream, client: 172.19.0.1, server: localhost, request: "GET /v1/subjects HTTP/1.1", upstream: "fastcgi://172.19.0.4:9000", host: "localhost"
+2018/02/15 05:54:13 [error] 5#5: *7 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught RuntimeException: Unexpected data in output buffer. Maybe you have characters before an opening <?php tag? in /var/www/html/vendor/slim/slim/Slim/App.php:604
+Stack trace:
+#0 /var/www/html/vendor/slim/slim/Slim/App.php(316): Slim\App->finalize(Object(Slim\Http\Response))
+#1 /var/www/html/public/index.php(30): Slim\App->run()
+#2 {main}
+  thrown in /var/www/html/vendor/slim/slim/Slim/App.php on line 604" while reading response header from upstream, client: 172.19.0.1, server: localhost, request: "GET /v1/subjects HTTP/1.1", upstream: "fastcgi://172.19.0.4:9000", host: "localhost"
+2018/02/15 05:54:56 [error] 5#5: *11 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught RuntimeException: Unexpected data in output buffer. Maybe you have characters before an opening <?php tag? in /var/www/html/vendor/slim/slim/Slim/App.php:604
+Stack trace:
+#0 /var/www/html/vendor/slim/slim/Slim/App.php(316): Slim\App->finalize(Object(Slim\Http\Response))
+#1 /var/www/html/public/index.php(30): Slim\App->run()
+#2 {main}
+  thrown in /var/www/html/vendor/slim/slim/Slim/App.php on line 604" while reading response header from upstream, client: 172.19.0.1, server: localhost, request: "GET /api/v1/subjects HTTP/1.1", upstream: "fastcgi://172.19.0.4:9000", host: "localhost"
+2018/02/15 05:55:54 [error] 5#5: *11 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught RuntimeException: Unexpected data in output buffer. Maybe you have characters before an opening <?php tag? in /var/www/html/vendor/slim/slim/Slim/App.php:604
+Stack trace:
+#0 /var/www/html/vendor/slim/slim/Slim/App.php(316): Slim\App->finalize(Object(Slim\Http\Response))
+#1 /var/www/html/public/index.php(30): Slim\App->run()
+#2 {main}
+  thrown in /var/www/html/vendor/slim/slim/Slim/App.php on line 604" while reading response header from upstream, client: 172.19.0.1, server: localhost, request: "GET /api/v1/subjects HTTP/1.1", upstream: "fastcgi://172.19.0.4:9000", host: "localhost"
+2018/02/15 05:56:52 [error] 5#5: *14 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught RuntimeException: Unexpected data in output buffer. Maybe you have characters before an opening <?php tag? in /var/www/html/vendor/slim/slim/Slim/App.php:604
+Stack trace:
+#0 /var/www/html/vendor/slim/slim/Slim/App.php(316): Slim\App->finalize(Object(Slim\Http\Response))
+#1 /var/www/html/public/index.php(30): Slim\App->run()
+#2 {main}
+  thrown in /var/www/html/vendor/slim/slim/Slim/App.php on line 604" while reading response header from upstream, client: 172.19.0.1, server: localhost, request: "GET /api/v1/subjects HTTP/1.1", upstream: "fastcgi://172.19.0.4:9000", host: "localhost"
+2018/02/15 05:56:52 [error] 5#5: *14 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught RuntimeException: Unexpected data in output buffer. Maybe you have characters before an opening <?php tag? in /var/www/html/vendor/slim/slim/Slim/App.php:604
+Stack trace:
+#0 /var/www/html/vendor/slim/slim/Slim/App.php(316): Slim\App->finalize(Object(Slim\Http\Response))
+#1 /var/www/html/public/index.php(30): Slim\App->run()
+#2 {main}
+  thrown in /var/www/html/vendor/slim/slim/Slim/App.php on line 604" while reading response header from upstream, client: 172.19.0.1, server: localhost, request: "GET /api/v1/subjects HTTP/1.1", upstream: "fastcgi://172.19.0.4:9000", host: "localhost"
+2018/02/15 06:37:58 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2018/02/15 06:40:03 [warn] 5#5: *1 an upstream response is buffered to a temporary file /var/cache/nginx/fastcgi_temp/1/00/0000000001 while reading upstream, client: 172.19.0.1, server: localhost, request: "POST /api/v1/subjects HTTP/1.1", upstream: "fastcgi://172.19.0.3:9000", host: "localhost"
+2018/02/15 06:44:20 [error] 5#5: *7 FastCGI sent in stderr: "PHP message: PHP Warning:  json_decode() expects parameter 1 to be string, array given in /var/www/html/public/index.php on line 86" while reading response header from upstream, client: 172.19.0.1, server: localhost, request: "POST /api/v1/subjects HTTP/1.1", upstream: "fastcgi://172.19.0.3:9000", host: "localhost"
+2018/02/15 06:56:09 [error] 5#5: *13 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined variable: pre in /var/www/html/public/index.php on line 97
+PHP message: Slim Application Error:
+Type: Error
+Message: Call to a member function execute() on null
+File: /var/www/html/public/index.php
+Line: 97
+Trace: #0 [internal function]: addSubject(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#1 /var/www/html/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(41): call_user_func('addSubject', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#2 /var/www/html/vendor/slim/slim/Slim/Route.php(335): Slim\Handlers\Strategies\RequestResponse->__invoke('addSubject', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#3 /var/www/html/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#4 /var/www/html/vendor/slim/slim/Slim/Route.php(313): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#5 /var/www/html/vendor/slim/slim/Slim/App.php(495): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Response))" while reading response header from upstream, client: 172.19.0.1, server: localhost, request: "POST /api/v1/subjects HTTP/1.1", upstream: "fastcgi://172.19.0.3:9000", host: "localhost"
+2018/02/15 07:33:08 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2018/02/15 07:33:12 [error] 5#5: *1 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined variable: response in /var/www/html/public/index.php on line 63
+PHP message: Slim Application Error:
+Type: Error
+Message: Call to a member function withJson() on null
+File: /var/www/html/public/index.php
+Line: 63
+Trace: #0 [internal function]: getSubjects(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#1 /var/www/html/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(41): call_user_func('getSubjects', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#2 /var/www/html/vendor/slim/slim/Slim/Route.php(335): Slim\Handlers\Strategies\RequestResponse->__invoke('getSubjects', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#3 /var/www/html/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#4 /var/www/html/vendor/slim/slim/Slim/Route.php(313): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#5 /var/www/html/vendor/slim/slim/Slim/App.php(495): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Respon" while reading response header from upstream, client: 172.19.0.1, server: localhost, request: "GET /api/v1/subjects HTTP/1.1", upstream: "fastcgi://172.19.0.2:9000", host: "localhost"
+2018/02/15 07:43:34 [error] 5#5: *4 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected '=' in /var/www/html/public/index.php on line 98" while reading response header from upstream, client: 172.19.0.1, server: localhost, request: "GET /api/v1/subjects/ HTTP/1.1", upstream: "fastcgi://172.19.0.2:9000", host: "localhost"
+2018/02/24 09:39:44 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2018/02/24 09:44:07 [error] 6#6: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  Unterminated comment starting line 204 in /var/www/html/public/index.php on line 204
+PHP message: PHP Fatal error:  Uncaught RuntimeException: Unexpected data in output buffer. Maybe you have characters before an opening <?php tag? in /var/www/html/vendor/slim/slim/Slim/App.php:604
+Stack trace:
+#0 /var/www/html/vendor/slim/slim/Slim/App.php(316): Slim\App->finalize(Object(Slim\Http\Response))
+#1 /var/www/html/public/index.php(47): Slim\App->run()
+#2 {main}
+  thrown in /var/www/html/vendor/slim/slim/Slim/App.php on line 604" while reading response header from upstream, client: 172.18.0.1, server: localhost, request: "GET /api/v1/students HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "localhost"
+2018/02/24 09:46:58 [error] 6#6: *6 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined variable: stu_id in /var/www/html/public/index.php on line 214" while reading response header from upstream, client: 172.18.0.1, server: localhost, request: "GET /api/v1/students/59160001 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "localhost"
+2018/02/24 09:47:17 [error] 6#6: *6 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined variable: stu_id in /var/www/html/public/index.php on line 214" while reading response header from upstream, client: 172.18.0.1, server: localhost, request: "GET /api/v1/students/59160001 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "localhost"
+2018/02/24 09:52:19 [error] 6#6: *16 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected '*', expecting end of file in /var/www/html/public/index.php on line 300" while reading response header from upstream, client: 172.18.0.1, server: localhost, request: "POST /api/v1/students HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "localhost"
+2018/02/24 09:57:36 [error] 6#6: *20 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Cannot redeclare deleteSubject() (previously declared in /var/www/html/public/index.php:156) in /var/www/html/public/index.php on line 299" while reading response header from upstream, client: 172.18.0.1, server: localhost, request: "PUT /api/v1/students HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "localhost"
+2018/02/24 09:59:07 [error] 6#6: *20 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined variable: stu_id in /var/www/html/public/index.php on line 263" while reading response header from upstream, client: 172.18.0.1, server: localhost, request: "PUT /api/v1/students/58160266 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "localhost"
+2018/02/24 10:52:41 [error] 6#6: *32 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected '*', expecting end of file in /var/www/html/public/index.php on line 429" while reading response header from upstream, client: 172.18.0.1, server: localhost, request: "GET /api/v1/majors/CS HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "localhost"
+2018/02/25 07:10:12 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2018/02/25 08:34:58 [error] 6#6: *13 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined variable: ex in /var/www/html/public/index.php on line 608
+PHP message: Slim Application Error:
+Type: Error
+Message: Call to a member function getMessage() on null
+File: /var/www/html/public/index.php
+Line: 608
+Trace: #0 [internal function]: getStudentsInMajors(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#1 /var/www/html/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(41): call_user_func('getStudentsInMa...', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#2 /var/www/html/vendor/slim/slim/Slim/Route.php(335): Slim\Handlers\Strategies\RequestResponse->__invoke('getStudentsInMa...', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#3 /var/www/html/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#4 /var/www/html/vendor/slim/slim/Slim/Route.php(313): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#5 /var/www/html/vendor/slim/slim/Slim/App.php(495): Slim\Route->run(Object(Slim\Http\Request)" while reading response header from upstream, client: 172.18.0.1, server: localhost, request: "GET /api/v1/faculty/IF/majors/it/students HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "localhost"
+2018/02/25 08:37:27 [error] 6#6: *18 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined variable: ex in /var/www/html/public/index.php on line 608
+PHP message: Slim Application Error:
+Type: Error
+Message: Call to a member function getMessage() on null
+File: /var/www/html/public/index.php
+Line: 608
+Trace: #0 [internal function]: getStudentsInMajors(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#1 /var/www/html/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(41): call_user_func('getStudentsInMa...', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#2 /var/www/html/vendor/slim/slim/Slim/Route.php(335): Slim\Handlers\Strategies\RequestResponse->__invoke('getStudentsInMa...', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#3 /var/www/html/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#4 /var/www/html/vendor/slim/slim/Slim/Route.php(313): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#5 /var/www/html/vendor/slim/slim/Slim/App.php(495): Slim\Route->run(Object(Slim\Http\Request)" while reading response header from upstream, client: 172.18.0.1, server: localhost, request: "GET /api/v1/faculty/IF/majors/it/students HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "localhost"
+2018/02/25 08:38:07 [error] 6#6: *18 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined variable: ex in /var/www/html/public/index.php on line 608
+PHP message: Slim Application Error:
+Type: Error
+Message: Call to a member function getMessage() on null
+File: /var/www/html/public/index.php
+Line: 608
+Trace: #0 [internal function]: getStudentsInMajors(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#1 /var/www/html/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(41): call_user_func('getStudentsInMa...', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#2 /var/www/html/vendor/slim/slim/Slim/Route.php(335): Slim\Handlers\Strategies\RequestResponse->__invoke('getStudentsInMa...', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#3 /var/www/html/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#4 /var/www/html/vendor/slim/slim/Slim/Route.php(313): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#5 /var/www/html/vendor/slim/slim/Slim/App.php(495): Slim\Route->run(Object(Slim\Http\Request)" while reading response header from upstream, client: 172.18.0.1, server: localhost, request: "GET /api/v1/faculty/IF/majors/it/students HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "localhost"
+2018/02/25 08:39:28 [error] 6#6: *18 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined variable: ex in /var/www/html/public/index.php on line 608
+PHP message: Slim Application Error:
+Type: Error
+Message: Call to a member function getMessage() on null
+File: /var/www/html/public/index.php
+Line: 608
+Trace: #0 [internal function]: getStudentsInMajors(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#1 /var/www/html/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(41): call_user_func('getStudentsInMa...', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#2 /var/www/html/vendor/slim/slim/Slim/Route.php(335): Slim\Handlers\Strategies\RequestResponse->__invoke('getStudentsInMa...', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#3 /var/www/html/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#4 /var/www/html/vendor/slim/slim/Slim/Route.php(313): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#5 /var/www/html/vendor/slim/slim/Slim/App.php(495): Slim\Route->run(Object(Slim\Http\Request)" while reading response header from upstream, client: 172.18.0.1, server: localhost, request: "GET /api/v1/faculty/IF/majors/it/students HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "localhost"
+2018/02/25 08:52:14 [error] 6#6: *34 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Cannot redeclare getStudentsInMajors() (previously declared in /var/www/html/public/index.php:586) in /var/www/html/public/index.php on line 661" while reading response header from upstream, client: 172.18.0.1, server: localhost, request: "POST /api/v1/faculty/IF/majors/dz/students HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "localhost"
+2018/02/27 11:18:12 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2018/02/27 11:19:08 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2018/02/28 04:39:52 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2018/02/28 05:40:19 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2018/03/02 07:35:50 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2018/03/02 08:00:10 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2018/03/02 08:03:28 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2018/03/02 09:21:46 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2018/03/02 10:09:41 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2018/04/29 11:49:11 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2018/04/29 12:07:33 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
