@@ -172,3 +172,28 @@ Trace: #0 [internal function]: getStudentsInMajors(Object(Slim\Http\Request), Ob
 2018/03/02 10:09:41 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
 2018/04/29 11:49:11 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
 2018/04/29 12:07:33 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2018/04/29 15:49:26 [error] 5#5: *78 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined variable: sql in /var/www/html/public/index.php on line 203" while reading response header from upstream, client: 172.21.0.1, server: localhost, request: "PATCH /api/v1/member/14 HTTP/1.1", upstream: "fastcgi://172.21.0.2:9000", host: "localhost"
+2018/04/29 16:13:26 [error] 5#5: *114 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined variable: stmt in /var/www/html/public/index.php on line 233
+PHP message: Slim Application Error:
+Type: Error
+Message: Call to a member function execute() on null
+File: /var/www/html/public/index.php
+Line: 233
+Trace: #0 [internal function]: getMissionCount(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#1 /var/www/html/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(41): call_user_func('getMissionCount', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#2 /var/www/html/vendor/slim/slim/Slim/Route.php(335): Slim\Handlers\Strategies\RequestResponse->__invoke('getMissionCount', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#3 /var/www/html/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#4 /var/www/html/vendor/slim/slim/Slim/Route.php(313): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#5 /var/www/html/vendor/slim/slim/Slim/App.php(495): Slim\Route->run(Object(Slim\Http\Request), Object(Slim" while reading response header from upstream, client: 172.21.0.1, server: localhost, request: "GET /api/v1/missionscount/yoza@gmail.com HTTP/1.1", upstream: "fastcgi://172.21.0.2:9000", host: "localhost"
+2018/04/29 16:13:31 [error] 5#5: *114 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined variable: stmt in /var/www/html/public/index.php on line 233
+PHP message: Slim Application Error:
+Type: Error
+Message: Call to a member function execute() on null
+File: /var/www/html/public/index.php
+Line: 233
+Trace: #0 [internal function]: getMissionCount(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#1 /var/www/html/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(41): call_user_func('getMissionCount', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#2 /var/www/html/vendor/slim/slim/Slim/Route.php(335): Slim\Handlers\Strategies\RequestResponse->__invoke('getMissionCount', Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#3 /var/www/html/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(117): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#4 /var/www/html/vendor/slim/slim/Slim/Route.php(313): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#5 /var/www/html/vendor/slim/slim/Slim/App.php(495): Slim\Route->run(Object(Slim\Http\Request), Object(Slim" while reading response header from upstream, client: 172.21.0.1, server: localhost, request: "GET /api/v1/missionscount/yoza@gmail.com HTTP/1.1", upstream: "fastcgi://172.21.0.2:9000", host: "localhost"

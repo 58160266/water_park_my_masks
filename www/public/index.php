@@ -17,6 +17,9 @@ $app->group('/api', function () use ($app) {
         $app->get('/waterparks/{id}','getWaterpark');
 
         $app->post('/members', 'addMemberWp_mark');
+        $app->patch('/members/{email}/{id}', 'updateMissionWp');
+
+        $app->get('/missionscount/{email}','getMissionCount');
 	});
 });
 
@@ -163,5 +166,84 @@ function addMemberWp_mark($request, $response) {
   } catch(PDOException $e) {
     return $response->withJson(array('error' => $ex->getMessage()),422);
   }
+
+}
+
+//update ว่าเคยไปที่ไหนมาแล้วบ้าง ส่งอีเมลกับเลข
+function updateMissionWp($request, $response) {
+    $wp_id = $request->getAttribute('id');
+    $mb_email = $request->getAttribute('email');
+    switch ($wp_id) {
+        case '1': $sql = "UPDATE member_wp SET mb_wp1=:wp_id WHERE mb_email LIKE :mb_email";
+          break;
+        case '2': $sql = "UPDATE member_wp SET mb_wp2=:wp_id WHERE mb_email LIKE :mb_email";
+          break;
+        case '3': $sql = "UPDATE member_wp SET mb_wp3=:wp_id WHERE mb_email LIKE :mb_email";
+          break;
+        case '4': $sql = "UPDATE member_wp SET mb_wp4=:wp_id WHERE mb_email LIKE :mb_email";
+          break;
+        case '5': $sql = "UPDATE member_wp SET mb_wp5=:wp_id WHERE mb_email LIKE :mb_email";
+          break;
+        case '6': $sql = "UPDATE member_wp SET mb_wp6=:wp_id WHERE mb_email LIKE :mb_email";
+          break;
+        case '7': $sql = "UPDATE member_wp SET mb_wp7=:wp_id WHERE mb_email LIKE :mb_email";
+          break;
+        case '8': $sql = "UPDATE member_wp SET mb_wp8=:wp_id WHERE mb_email LIKE :mb_email";
+          break;
+        case '9': $sql = "UPDATE member_wp SET mb_wp9=:wp_id WHERE mb_email LIKE :mb_email";
+          break;
+        case '10': $sql = "UPDATE member_wp SET mb_wp10=:wp_id WHERE mb_email LIKE :mb_email";
+          break;
+        case '11': $sql = "UPDATE member_wp SET mb_wp11=:wp_id WHERE mb_email LIKE :mb_email";
+          break;
+        case '12': $sql = "UPDATE member_wp SET mb_wp12=:wp_id WHERE mb_email LIKE :mb_email";
+          break;
+
+      default: break;
+    }
+    try {
+        $db = getConnection();
+        $stmt = $db->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
+        $values = array(
+            ':wp_id' => 1,
+            ':mb_email' => $mb_email
+        );
+        $result = $stmt->execute($values);
+        if($result){
+            return $response->withJson(array('status' => 'Waterpark My Mark Updated'),200);
+        }else{
+            return $response->withJson(array('status' => 'Waterpark My Mark Not Found'),422);
+        }
+
+        $db=null;
+        }
+        catch(\PDOException $ex){
+                return $response->withJson(array('error' => $ex->getMessage()),422);
+        }
+}
+
+//นับว่าไปมากี่ที่
+function getMissionCount($request, $response) {
+    $mb_email = $request->getAttribute('email');
+    $sql = "SELECT mb_wp1+mb_wp2+mb_wp3+mb_wp4+mb_wp5+mb_wp6+mb_wp7+mb_wp8+mb_wp9+mb_wp10+mb_wp11+mb_wp12 AS count FROM member_wp WHERE mb_email=:mb_email";
+    try {
+        $db = getConnection();
+        $stmt = $db->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
+        $values = array(
+            ':mb_email' => $mb_email
+        );
+        $stmt->execute($values);
+        $result = $stmt->fetchAll(PDO::FETCH_OBJ);
+        if($result){
+            return $response->withJson(array('status' => 'true','result'=>$result),200);
+        }else{
+            return $response->withJson(array('status' => 'Waterpark Not Found'),422);
+        }
+        $db=null;
+
+    }
+    catch(\PDOException $ex){
+        return $response->withJson(array('error' => $ex->getMessage()),422);
+    }
 
 }
