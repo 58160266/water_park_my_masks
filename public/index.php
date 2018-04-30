@@ -29,7 +29,7 @@ $app->group('/api', function () use ($app) {
         $app->get('/waterparks/{id}','getWaterpark');
 
         $app->post('/members', 'addMemberWp_mark');
-        $app->patch('/members/{email}/{id}', 'updateMissionWp');
+        $app->post('/missions', 'updateMissionWp');
 
         $app->get('/missionscount/{email}','getMissionCount');
 	});
@@ -153,8 +153,8 @@ function addMemberWp_mark($request, $response) {
 
 //update ว่าเคยไปที่ไหนมาแล้วบ้าง ส่งอีเมลกับเลข
 function updateMissionWp($request, $response) {
-    $wp_id = $request->getAttribute('id');
-    $mb_email = $request->getAttribute('email');
+    $wp_id = $request->getParam('id');
+    $mb_email = $request->getParam('email');
     switch ($wp_id) {
         case '1': $sql = "UPDATE member_wp SET mb_wp1=:wp_id WHERE mb_email LIKE :mb_email";
           break;
