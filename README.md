@@ -4,6 +4,7 @@ part เริ่มต้น : https://angsila.cs.buu.ac.th/~58160266/reatful/p
 
 /api
     /v1
+        
         GET : waterparks   -> return status , result (all) id , picture , detail
         GET : waterpars/{id} -> return status , result (one) id , picture ,detail
         GET : missioncount/{email} -> return status , result num of pass mission
