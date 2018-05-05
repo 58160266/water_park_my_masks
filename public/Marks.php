@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://angsila.cs.buu.ac.th/~58160266/ProWebser/api_get_datafb.js"></script>
   <style>
   body {
       font: 400 15px Lato, sans-serif;
@@ -33,7 +34,7 @@
       color: #303030;
       font-weight: 400;
       margin-bottom: 30px;
-  }  
+  }
   .jumbotron {
       background-color: #20B2AA;
       color: #fff;
@@ -85,7 +86,7 @@
       font-style: normal;
   }
   .panel {
-      border: 1px solid #f4511e; 
+      border: 1px solid #f4511e;
       border-radius:0 !important;
       transition: box-shadow 0.5s;
   }
@@ -161,7 +162,7 @@
     0% {
       opacity: 0;
       transform: translateY(70%);
-    } 
+    }
     100% {
       opacity: 1;
       transform: translateY(0%);
@@ -171,7 +172,7 @@
     0% {
       opacity: 0;
       -webkit-transform: translateY(70%);
-    } 
+    }
     100% {
       opacity: 1;
       -webkit-transform: translateY(0%);
@@ -202,7 +203,7 @@
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
+        <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#myPage">Logo</a>
      </div>
@@ -219,9 +220,9 @@
     </nav>
 
 <div class="jumbotron text-center">
-  <h1>Water Park My Marks</h1> 
+  <h1>Water Park My Marks</h1>
   <form>
-    
+
   </form>
 </div>
 
@@ -230,13 +231,13 @@
 <div class="w3-container w3-content" style="max-width:2500px;margin-top:30px">    <!-- Page Container -->
 
   <div class="w3-row">  <!-- The Grid -->
-  
+
     <div class="w3-col m3">  <!-- Left Column -->
-     
+
       <div class="w3-card w3-round w3-white"> <!-- Profile -->
         <div class="w3-container">
          <h4 class="w3-center">User</h4>
-         <p class="w3-center"><img src="img/U.jpg" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+         <p class="w3-center"><img src="img/user.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
          <hr>
          <div class="list-group">
          <a href="1.php" class="list-group-item"> 1. Vana Nava Hua Hin</a>
@@ -255,21 +256,21 @@
         </div>
       </div><!-- End Profile -->
     </div><!-- End Left Column -->
-    
+
     <div class="w3-col m7" style="margin-top:-15px" ><!-- Middle Column -->
       <div class="w3-container w3-card w3-white w3-round w3-margin" align="center"><br>
         <img src="img/Logo.png" width="400" height="300"></td>
         <h4>ทำเครื่องหมายสวนน้ำที่คุณเคยไปมาแล้ว</h4>
          <h4>โดยเลือกสวนน้ำที่เมนูด้านข้าง</h4>
       </div>
-      
-      
+
+
     </div><!-- End Left Column -->
-  
+
 
   </div><!-- End Grid -->
 </div><!-- End Page Container -->
-      
+
 
 
 
@@ -298,13 +299,13 @@ $(document).ready(function(){
       $('html, body').animate({
         scrollTop: $(hash).offset().top
       }, 900, function(){
-   
+
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
       });
     } // End if
   });
-  
+
   $(window).scroll(function() {
     $(".slideanim").each(function(){
       var pos = $(this).offset().top;
