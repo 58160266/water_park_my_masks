@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://angsila.cs.buu.ac.th/~58160266/ProWebser/api_get_datafb.js"></script>
   <script>
   $(document).ready(function(){
       $.get("https://angsila.cs.buu.ac.th/~58160266/reatful/public/index.php/api/v1/waterparks/1", function(data, status){
@@ -27,6 +28,15 @@
       });
   });
   </script>
+
+  <div id="fb-root"></div> <!-- fb page sdk javascript -->
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v3.0&appId=1724935924262941&autoLogAppEvents=1';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
 
   <style>
   body {
@@ -226,7 +236,7 @@
             <li class="active"><a href="Marks.php"><b>Marks</b></a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="Login.php" ><b>Logout</b></a></li>
+            <li><a href="#" onclick="logout();" ><b>Logout</b></a></li>
           </ul>
         </div>
       </div>
@@ -249,8 +259,8 @@
 
       <div class="w3-card w3-round w3-white"> <!-- Profile -->
         <div class="w3-container">
-         <h4 class="w3-center">User</h4>
-         <p class="w3-center"><img src="img/U.jpg" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+         <h4 class="w3-center" id='user_name'>User</h4>
+         <p class="w3-center" id='user_pic'><img src="img/U.jpg" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
          <hr>
          <div class="list-group">
          <a href="1.php" class="list-group-item active"> 1. Vana Nava Hua Hin</a>
@@ -270,7 +280,7 @@
       </div><!-- End Profile -->
     </div><!-- End Left Column -->
 
-    <div class="w3-col m7" style="margin-top:-15px" ><!-- Middle Column -->
+    <div class="w3-col m7" style="margin-top:-15px" ><!--  Column -->
       <div class="w3-container w3-card w3-white w3-round w3-margin" align="center"><br>
         <p id='pic'></p>
         <p id='name'></p>
@@ -278,8 +288,24 @@
         <p id='contract'></p>
       </div>
 
+     
 
-    </div><!-- End Left Column -->
+    </div><!-- End Middle Column -->
+
+     
+    <div class="w3-col m2"> <!-- Right Column -->
+      <div class="w3-card w3-round w3-white w3-center">
+          <!-- fb page sdk -->
+          <div class="fb-page" data-href="https://www.facebook.com/VanaNavaHuaHin/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-height="805">
+            <blockquote cite="https://www.facebook.com/VanaNavaHuaHin/" class="fb-xfbml-parse-ignore">
+              <a href="https://www.facebook.com/VanaNavaHuaHin/">Vana Nava Water Jungle</a>
+            </blockquote>
+          </div>
+         <!--End fb page sdk -->
+      </div>
+      
+   
+    </div> <!-- End Right Column -->
 
 
   </div><!-- End Grid -->
