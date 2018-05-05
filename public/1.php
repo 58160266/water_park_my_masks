@@ -31,12 +31,13 @@
 
   <div id="fb-root"></div> <!-- fb page sdk javascript -->
       <script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v3.0&appId=1724935924262941&autoLogAppEvents=1';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v3.0&appId=1724935924262941&autoLogAppEvents=1';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+      </script>
 
   <style>
   body {
@@ -286,10 +287,24 @@
         <p id='name'></p>
         <p id='detail'></p>
         <p id='contract'></p>
-      </div>
+      
 
-     
+  <!--  confirm marks -->
+      <script language="JavaScript"> 
 
+        function chkConfirm(){
+            if(confirm('ยืนยันการทำเครื่องหมายว่าไปมาแล้ว หรือไม่')==true)
+        {
+          alert('ทำเครื่องหมายว่าไปมาแล้ว เสร็จสิ้นแล้ว');
+          window.location = 'https://angsila.cs.buu.ac.th/~58160266/ProWebser/1.php';
+        }else{
+          alert('ยกเลิกการทำเครื่องหมายว่าไปมาแล้ว เสร็จสิ้นแล้ว');
+            }
+        }
+      </script>
+      <input type="button" name="btnConfirm" class="btn btn-info" value="Check Mark" OnClick="chkConfirm()">
+      <br><br>   
+    </div>
     </div><!-- End Middle Column -->
 
      
@@ -303,8 +318,6 @@
           </div>
          <!--End fb page sdk -->
       </div>
-      
-   
     </div> <!-- End Right Column -->
 
 
