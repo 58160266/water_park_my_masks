@@ -322,7 +322,7 @@ input[type=submit]:hover {
 </head>
 <body>
 
-<!--Login facebook or google -->
+<!--Login facebook -->
 <div class="container">
   <form action="/action_page.php">
     <div class="row">
