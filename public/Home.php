@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +15,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://angsila.cs.buu.ac.th/~58160266/ProWebser/api_get_rank.js"></script>
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v3.0&appId=1724935924262941&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
   <style>
   body {
       font: 400 15px Lato, sans-serif;
@@ -33,7 +43,7 @@
       color: #303030;
       font-weight: 400;
       margin-bottom: 30px;
-  }  
+  }
   .jumbotron {
       background-color: #20B2AA;
       color: #fff;
@@ -85,7 +95,7 @@
       font-style: normal;
   }
   .panel {
-      border: 1px solid #f4511e; 
+      border: 1px solid #f4511e;
       border-radius:0 !important;
       transition: box-shadow 0.5s;
   }
@@ -161,7 +171,7 @@
     0% {
       opacity: 0;
       transform: translateY(70%);
-    } 
+    }
     100% {
       opacity: 1;
       transform: translateY(0%);
@@ -171,7 +181,7 @@
     0% {
       opacity: 0;
       -webkit-transform: translateY(70%);
-    } 
+    }
     100% {
       opacity: 1;
       -webkit-transform: translateY(0%);
@@ -202,7 +212,7 @@
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
+        <span class="icon-bar"></span>
       </button>
 
      </div>
@@ -212,16 +222,16 @@
             <li><a href="Marks.php"><b>Marks</b></a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="Login.php" ><b>Logout</b></a></li>
+            <li><a href="#" onclick="logout();" ><b>Logout</b></a></li>
           </ul>
         </div>
       </div>
     </nav>
 
 <div class="jumbotron text-center">
-  <h1>Water Park My Marks</h1> 
+  <h1>Water Park My Marks</h1>
   <form>
-    
+
   </form>
 </div>
 
@@ -230,40 +240,46 @@
 <div class="w3-container w3-content" style="max-width:2500px;margin-top:30px">    <!-- Page Container -->
 
   <div class="w3-row">  <!-- The Grid -->
-  
+
     <div class="w3-col m3">  <!-- Left Column -->
-     
+
       <div class="w3-card w3-round w3-white"> <!-- Profile -->
         <div class="w3-container">
-         <h4 class="w3-center">User</h4>
-         <p class="w3-center"><img src="img/user.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+         <h4 class="w3-center" id='user_name'>User</h4>
+         <p class="w3-center" id='user_pic'><img src="img/user.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
          <br>
-         <h4>ดึงข้อมูล User มาจาก facebook api </h4>
+         <h4 hidden id='user_email'>ดึงข้อมูล User มาจาก facebook api </h4>
          <hr>
          <div class="list-group">
-         <a href="" class="list-group-item"><img src="img/cup1.png" width="270" height="70"></a>
-         <a href="" class="list-group-item"><img src="img/icon1.png" width="30" height="30"> Start Mission!</a>
-         <a href="" class="list-group-item"><img src="img/car1.png" width="270" height="200"></a>
-       
+         <a href="" class="list-group-item" id=cup><img src="http://angsila.cs.buu.ac.th/~58160186/887373/img/cup1.png" width="270" height="70"></a>
+         <a href="" class="list-group-item" id=rankmessage><img src="http://angsila.cs.buu.ac.th/~58160186/887373/img/icon1.png" width="30" height="30"> Start Mission!</a>
+         <a href="" class="list-group-item" id="car"><img src="http://angsila.cs.buu.ac.th/~58160186/887373/img/car1.png" width="270" height="200"></a>
+
         </div>
         </div>
       </div><!-- End Profile -->
     </div><!-- End Left Column -->
-    
+
     <div class="w3-col m7" style="margin-top:-15px" ><!-- Middle Column -->
       <div class="w3-container w3-card w3-white w3-round w3-margin" align="center"><br>
-        <img src="img/Logo1.png" width="400" height="300"></td>
+        <img src="http://angsila.cs.buu.ac.th/~58160186/887373/img/Logo1.png" width="400" height="300"></td>
         <h4>เหลือแผนที่ต้องดึงมาจาก google maps api</h4>
-      
+
       </div>
-      
-      
-    </div><!-- End Left Column -->
-  
+
+
+    </div><!-- End Middle Column -->
+<div class="w3-col m2"> <!-- Right Column -->
+      <div class="w3-card w3-round w3-white w3-center">
+          <!-- fb page sdk -->
+          <div class="fb-page" data-href="https://www.facebook.com/waterparkmymarks/?notif_t=page_invite&amp;ref=notif" data-tabs="timeline" data-height="650" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/waterparkmymarks/?notif_t=page_invite&amp;ref=notif" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/waterparkmymarks/?notif_t=page_invite&amp;ref=notif">Water Park My Marks</a></blockquote></div>
+         <!--End fb page sdk -->
+      </div>
+    </div> <!-- End Right Column -->
 
   </div><!-- End Grid -->
 </div><!-- End Page Container -->
-      
+
 
 
 
@@ -292,13 +308,13 @@ $(document).ready(function(){
       $('html, body').animate({
         scrollTop: $(hash).offset().top
       }, 900, function(){
-   
+
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
       });
     } // End if
   });
-  
+
   $(window).scroll(function() {
     $(".slideanim").each(function(){
       var pos = $(this).offset().top;

@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://angsila.cs.buu.ac.th/~58160266/ProWebser/api_login_fb.js"></script>
   <style>
   body {
       font: 400 15px Lato, sans-serif;
@@ -21,7 +22,7 @@
       text-transform: uppercase;
       color: #303030;
       font-weight: 600;
-      
+
       text-align: center;
   }
   h4 {
@@ -30,7 +31,7 @@
       color: #303030;
       font-weight: 400;
       margin-bottom: 30px;
-  }  
+  }
   .jumbotron {
       background-color: #20B2AA;
       color: #fff;
@@ -82,7 +83,7 @@
       font-style: normal;
   }
   .panel {
-      border: 1px solid #f4511e; 
+      border: 1px solid #f4511e;
       border-radius:0 !important;
       transition: box-shadow 0.5s;
   }
@@ -158,7 +159,7 @@
     0% {
       opacity: 0;
       transform: translateY(70%);
-    } 
+    }
     100% {
       opacity: 1;
       transform: translateY(0%);
@@ -168,7 +169,7 @@
     0% {
       opacity: 0;
       -webkit-transform: translateY(70%);
-    } 
+    }
     100% {
       opacity: 1;
       -webkit-transform: translateY(0%);
@@ -198,10 +199,10 @@
 <br>
 <table border="0" align="center">
 <tr>
-<td><img src="img/Logo1.png" width="400" height="300"></td>
+<td><img src="https://angsila.cs.buu.ac.th/~58160266/ProWebser/img/Logo.png" width="400" height="300"></td>
 </tr>
 </table>
-<br>     
+<br>
 
 
 <!DOCTYPE html>
@@ -220,9 +221,9 @@ body {
 .container {
   position: relative;
   border-radius: 5px;
-  
+
   padding: 20px 0 30px 0;
-} 
+}
 /* style inputs and link buttons */
 input,
 .btn {
@@ -321,19 +322,20 @@ input[type=submit]:hover {
 </style>
 </head>
 <body>
+<br>
 
-<!--Login facebook -->
+<!--Login facebook or google -->
 <div class="container">
   <form action="/action_page.php">
     <div class="row">
       <h2 style="text-align:center">Login with Social Media</h2>
       </div>
       <div class="col">
-        <a href="#" class="fb btn">
+        <a href="#" onclick="login()" class="fb btn">
           <i class="fa fa-facebook fa-fw"></i> Login with Facebook
          </a>
         </a>
-      </div>  
+      </div>
     </div>
   </form>
 </div>
@@ -366,13 +368,13 @@ $(document).ready(function(){
       $('html, body').animate({
         scrollTop: $(hash).offset().top
       }, 900, function(){
-   
+
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
       });
     } // End if
   });
-  
+
   $(window).scroll(function() {
     $(".slideanim").each(function(){
       var pos = $(this).offset().top;
