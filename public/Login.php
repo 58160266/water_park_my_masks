@@ -39,7 +39,6 @@
   }
   .container-fluid {
       padding: 60px 50px;
-
   }
   .bg-grey {
       background-color: #f6f6f6;
@@ -179,7 +178,6 @@
     .col-sm-4 {
       text-align: center;
       margin: 25px 0;
-
     }
     .btn-lg {
         width: 100%;
@@ -215,11 +213,9 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
-
 * {
   box-sizing: border-box;
 }
-
 /* style the container */
 .container {
   position: relative;
@@ -227,7 +223,6 @@ body {
   
   padding: 20px 0 30px 0;
 } 
-
 /* style inputs and link buttons */
 input,
 .btn {
@@ -242,36 +237,28 @@ input,
   line-height: 20px;
   text-decoration: none; /* remove underline from anchors */
 }
-
 input:hover,
 .btn:hover {
   opacity: 1;
 }
-
 /* add appropriate colors to fb, twitter and google buttons */
 .fb {
   background-color: #3B5998;
   color: white;
 }
-
-
 .google {
   background-color: #dd4b39;
   color: white;
 }
-
 /* style the submit button */
 input[type=submit] {
   background-color: #4CAF50;
   color: white;
   cursor: pointer;
 }
-
 input[type=submit]:hover {
   background-color: #45a049;
-
 }
-
 /* Two-column layout */
 .col {
   float: center;
@@ -280,14 +267,12 @@ input[type=submit]:hover {
   padding: 0 50px;
   margin-top: 6px;
 }
-
 /* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
-
 /* vertical line */
 .vl {
   position: absolute;
@@ -296,7 +281,6 @@ input[type=submit]:hover {
   border: 2px solid #ddd;
   height: 175px;
 }
-
 /* text inside the vertical line */
 .vl-innertext {
   position: absolute;
@@ -307,19 +291,16 @@ input[type=submit]:hover {
   border-radius: 50%;
   padding: 8px 10px;
 }
-
 /* hide some text on medium and large screens */
 .hide-md-lg {
   display: none;
 }
-
 /* bottom container */
 .bottom-container {
   text-align: center;
   background-color: #666;
   border-radius: 0px 0px 4px 4px;
 }
-
 /* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 650px) {
   .col {
@@ -352,9 +333,6 @@ input[type=submit]:hover {
           <i class="fa fa-facebook fa-fw"></i> Login with Facebook
          </a>
         </a>
-        <a href="#" class="google btn"><i class="fa fa-google fa-fw">
-          </i> Login with Google+
-        </a>
       </div>  
     </div>
   </form>
@@ -381,10 +359,8 @@ $(document).ready(function(){
     if (this.hash !== "") {
       // Prevent default anchor click behavior
       event.preventDefault();
-
       // Store hash
       var hash = this.hash;
-
       // Using jQuery's animate() method to add smooth page scroll
       // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
@@ -400,7 +376,6 @@ $(document).ready(function(){
   $(window).scroll(function() {
     $(".slideanim").each(function(){
       var pos = $(this).offset().top;
-
       var winTop = $(window).scrollTop();
         if (pos < winTop + 600) {
           $(this).addClass("slide");
