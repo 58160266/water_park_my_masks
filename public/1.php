@@ -15,6 +15,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://angsila.cs.buu.ac.th/~58160266/ProWebser/api_get_datafb.js"></script>
+
   <script>
   $(document).ready(function(){
       $.get("https://angsila.cs.buu.ac.th/~58160266/reatful/public/index.php/api/v1/waterparks/1", function(data, status){
@@ -40,6 +41,10 @@
       </script>
 
   <style>
+  .modal {
+    padding-top: 200px; /* Location of the box */
+  }
+  
   body {
       font: 400 15px Lato, sans-serif;
       line-height: 1.8;
@@ -229,7 +234,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#myPage">Logo</a>
+      
      </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-left">
@@ -261,6 +266,7 @@
       <div class="w3-card w3-round w3-white"> <!-- Profile -->
         <div class="w3-container">
          <h4 class="w3-center" id='user_name'>User</h4>
+         <h4 class="w3-center" id='user_email' hidden></h4>
          <p class="w3-center" id='user_pic'><img src="img/U.jpg" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
          <hr>
          <div class="list-group">
@@ -273,8 +279,8 @@
          <a href="7.php" class="list-group-item"> 7. Scenical World</a>
          <a href="8.php" class="list-group-item"> 8. Dino Water Park Khon Kaen</a>
          <a href="9.php" class="list-group-item"> 9. Usotel Water Park</a>
-         <a href="10.php" class="list-group-item"> 10.  SiamParkCity</a>
-         <a href="11.php" class="list-group-item"> 11.  Cartoon Network Amazon </a>
+         <a href="10.php" class="list-group-item"> 10.  Siam Park City</a>
+         <a href="11.php" class="list-group-item"> 11.  Pororo Aquapark BKK </a>
          <a href="12.php" class="list-group-item"> 12.  Ramayana Water Park</a>
         </div>
         </div>
@@ -287,27 +293,42 @@
         <p id='name'></p>
         <p id='detail'></p>
         <p id='contract'></p>
-      
 
-  <!--  confirm marks -->
-      <script language="JavaScript"> 
 
-        function chkConfirm(){
-            if(confirm('ยืนยันการทำเครื่องหมายว่าไปมาแล้ว หรือไม่')==true)
-        {
-          alert('ทำเครื่องหมายว่าไปมาแล้ว เสร็จสิ้นแล้ว');
-          window.location = 'https://angsila.cs.buu.ac.th/~58160266/ProWebser/1.php';
-        }else{
-          alert('ยกเลิกการทำเครื่องหมายว่าไปมาแล้ว เสร็จสิ้นแล้ว');
-            }
-        }
-      </script>
-      <input type="button" name="btnConfirm" class="btn btn-info" value="Check Mark" OnClick="chkConfirm()">
-      <br><br>   
+   <!-- popup -->
+       <div id='missionClick_btn_2'>
+          <!-- Trigger the modal with a button -->
+          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Check Mark</button>
+          <!-- Modal -->
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">ทำเครื่องหมายว่าไปมาแล้ว</h4>
+                </div>
+                <div class="modal-body">
+                  <p>กรุณายืนยันว่าคุณได้ไปที่ Vana Nava Water Jungle มาแล้ว </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" onclick="getMission(2);"data-dismiss="modal">ตกลง</button>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">ยกเลิก</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          </div>
+          <br><br>
+        <!-- popup -->
+
+
+
     </div>
     </div><!-- End Middle Column -->
 
-     
+
     <div class="w3-col m2"> <!-- Right Column -->
       <div class="w3-card w3-round w3-white w3-center">
           <!-- fb page sdk -->

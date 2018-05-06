@@ -205,7 +205,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#myPage">Logo</a>
+      
      </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-left">
@@ -213,7 +213,7 @@
             <li class="active"><a href="Marks.php"><b>Marks</b></a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="Login.php" ><b>Logout</b></a></li>
+            <li><a href="#" onclick="logout();" ><b>Logout</b></a></li>
           </ul>
         </div>
       </div>
@@ -236,8 +236,9 @@
 
       <div class="w3-card w3-round w3-white"> <!-- Profile -->
         <div class="w3-container">
-         <h4 class="w3-center">User</h4>
-         <p class="w3-center"><img src="img/user.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+          <h4 class="w3-center" id='user_name'>User</h4>
+          <h4 class="w3-center" id='user_email' hidden></h4>
+          <p class="w3-center" id='user_pic'><img src="img/U.jpg" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
          <hr>
          <div class="list-group">
          <a href="1.php" class="list-group-item"> 1. Vana Nava Hua Hin</a>

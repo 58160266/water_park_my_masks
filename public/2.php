@@ -40,6 +40,10 @@
       </script>
 
   <style>
+  .modal {
+    padding-top: 200px; /* Location of the box */
+  }
+
   body {
       font: 400 15px Lato, sans-serif;
       line-height: 1.8;
@@ -229,7 +233,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#myPage">Logo</a>
+     
      </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-left">
@@ -261,6 +265,7 @@
       <div class="w3-card w3-round w3-white"> <!-- Profile -->
         <div class="w3-container">
           <h4 class="w3-center" id='user_name'>User</h4>
+          <h4 class="w3-center" id='user_email' hidden></h4>
           <p class="w3-center" id='user_pic'><img src="img/U.jpg" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
          <hr>
          <div class="list-group">
@@ -273,8 +278,8 @@
          <a href="7.php" class="list-group-item"> 7. Scenical World</a>
          <a href="8.php" class="list-group-item"> 8. Dino Water Park Khon Kaen</a>
          <a href="9.php" class="list-group-item"> 9. Usotel Water Park</a>
-         <a href="10.php" class="list-group-item"> 10.  SiamParkCity</a>
-         <a href="11.php" class="list-group-item"> 11.  Cartoon Network Amazon </a>
+         <a href="10.php" class="list-group-item"> 10.  Siam Park City</a>
+         <a href="11.php" class="list-group-item"> 11.  Pororo Aquapark BKK </a>
          <a href="12.php" class="list-group-item"> 12.  Ramayana Water Park</a>
         </div>
         </div>
@@ -287,18 +292,46 @@
         <p id='name'></p>
         <p id='detail'></p>
         <p id='contract'></p>
+
+    <!-- popup -->
+       <div id='missionClick_btn_2'>
+          <!-- Trigger the modal with a button -->
+          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Check Mark</button>
+          <!-- Modal -->
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">ทำเครื่องหมายว่าไปมาแล้ว</h4>
+                </div>
+                <div class="modal-body">
+                  <p>กรุณายืนยันว่าคุณได้ไปที่ Santorini Water Fantasy มาแล้ว </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" onclick="getMission(2);"data-dismiss="modal">ตกลง</button>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">ยกเลิก</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          </div>
+          <br><br>
+        <!-- popup -->
+
+        <br>
       </div>
+
     </div><!-- End Middle Column -->
 
- 
+
+
     <div class="w3-col m2"> <!-- Right Column -->
       <div class="w3-card w3-round w3-white w3-center">
           <!-- fb page sdk -->
-          <div class="fb-page" data-href="https://web.facebook.com/santoriniparkwaterventures/?_rdc=1&_rdr" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-height="805">
-            <blockquote cite="https://web.facebook.com/santoriniparkwaterventures/?_rdc=1&_rdr" class="fb-xfbml-parse-ignore">
-              <a href="https://web.facebook.com/santoriniparkwaterventures/?_rdc=1&_rdr">Santorini Park Waterventures</a>
-            </blockquote>
-          </div>
+          <div class="fb-page" data-href="https://www.facebook.com/santoriniparkwaterventures/" data-tabs="timeline" data-height="805" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/santoriniparkwaterventures/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/santoriniparkwaterventures/">Santorini Park Waterventures</a></blockquote></div>
          <!--End fb page sdk -->
       </div>
     </div> <!-- End Right Column -->
