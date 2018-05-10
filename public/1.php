@@ -20,12 +20,13 @@
   $(document).ready(function(){
       $.get("https://angsila.cs.buu.ac.th/~58160266/reatful/public/index.php/api/v1/waterparks/1", function(data, status){
               //alert("Data: " + data.result["0"].wp_detail + "\nStatus: " + status);
-          console.log(data);
+          //console.log(data);
           //console.log(.result.wp_pic);
-          $('#pic').html("<img src='"+data.result.wp_pic+"' />");
-          $('#name').html(data.result.wp_name);
+          $('#pic').html("<img src='"+data.result.wp_pic+"' class='img-thumbnail' alt='Cinque Terre' width='90%' >");
+          $('#name').html("<br><h2>"+'<img src="http://angsila.cs.buu.ac.th/~58160186/887373/img/icon1.png" width="50" height="50">'+" "+data.result.wp_name+"</h2>");
           $('#detail').html(data.result.wp_detail);
-          $('#contract').html(data.result.wp_contract);
+          $('#contract').html('<a href="'+data.result.wp_contract+'">'+data.result.wp_contract+'</a>');
+
       });
   });
   </script>
@@ -44,7 +45,7 @@
   .modal {
     padding-top: 200px; /* Location of the box */
   }
-  
+
   body {
       font: 400 15px Lato, sans-serif;
       line-height: 1.8;
@@ -234,7 +235,6 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      
      </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-left">
@@ -296,7 +296,7 @@
 
 
    <!-- popup -->
-       <div id='missionClick_btn_2'>
+       <div id='missionClick_btn_1'>
           <!-- Trigger the modal with a button -->
           <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Check Mark</button>
           <!-- Modal -->
@@ -312,7 +312,7 @@
                   <p>กรุณายืนยันว่าคุณได้ไปที่ Vana Nava Water Jungle มาแล้ว </p>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-default" onclick="getMission(2);"data-dismiss="modal">ตกลง</button>
+                  <button type="button" class="btn btn-default" onclick="getMission(1);"data-dismiss="modal">ตกลง</button>
                   <button type="button" class="btn btn-default" data-dismiss="modal">ยกเลิก</button>
                 </div>
               </div>
